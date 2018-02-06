@@ -8,10 +8,12 @@
    +------------------------------------------------------------------------+ */
 
 #include <mrpt/gui.h>
+#include <mrpt/img/CImage.h>
 
 using namespace mrpt;
 using namespace mrpt::gui;
 using namespace std;
+using namespace mrpt::img;
 
 // ------------------------------------------------------
 //				TestFonts

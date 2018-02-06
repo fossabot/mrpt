@@ -12,11 +12,14 @@
 #include <mrpt/core/aligned_std_vector.h>
 #include <mrpt/system/CTicTac.h>
 #include <mrpt/gui/CDisplayWindowPlots.h>
+#include <mrpt/math/CArrayNumeric.h>
+#include <mrpt/system/CTicTac.h>
 
 using namespace mrpt::math;
 using namespace mrpt::gui;
 using namespace mrpt::random;
 using namespace std;
+using namespace mrpt::system;
 
 // ------------------------------------------------------
 //				TestKMeans

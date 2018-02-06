@@ -72,7 +72,7 @@ IF(BUILD_EXAMPLES)
 	SET(CMAKE_EXAMPLE_DEPS mrpt-serialization mrpt-io)
 	GENERATE_CMAKE_FILES_SAMPLES_DIRECTORY()
 
-	# === Depending on: mrpt-base ===
+	# === Depending on: ===
 	#  list of examples for each directory:
 	SET(LIST_EXAMPLES_IN_THIS_DIR
 		db
@@ -91,19 +91,19 @@ IF(BUILD_EXAMPLES)
 		quaternions
 		optimize-lm
 		)
-	SET(CMAKE_EXAMPLE_DEPS mrpt-base)
+	SET(CMAKE_EXAMPLE_DEPS)
 	GENERATE_CMAKE_FILES_SAMPLES_DIRECTORY()
 
-	# === Depending on: mrpt-base, mrpt-comms ===
+	# === Depending on:, mrpt-comms mrpt-serialization mrpt-poses ===
 	SET(LIST_EXAMPLES_IN_THIS_DIR
 		http_tests
 		SerialPort_test
 		SocketsTest
 		)
-	SET(CMAKE_EXAMPLE_DEPS mrpt-base mrpt-comms)
+	SET(CMAKE_EXAMPLE_DEPS mrpt-comms mrpt-serialization mrpt-poses)
 	GENERATE_CMAKE_FILES_SAMPLES_DIRECTORY()
 
-	# === Depending on: mrpt-base, mrpt-gui ===
+	# === Depending on:, mrpt-gui ===
 	#  list of examples for each directory:
 	SET(LIST_EXAMPLES_IN_THIS_DIR
 		display3D
@@ -124,15 +124,15 @@ IF(BUILD_EXAMPLES)
 		slerp_demo
 		texture_sizes_test
 		)
-	SET(CMAKE_EXAMPLE_DEPS mrpt-base mrpt-gui)
+	SET(CMAKE_EXAMPLE_DEPS mrpt-gui)
 	GENERATE_CMAKE_FILES_SAMPLES_DIRECTORY()
 
-	# === Depending on: mrpt-base, mrpt-bayes, mrpt-obs, mrpt-gui ===
+	# === Depending on:, mrpt-bayes, mrpt-obs, mrpt-gui ===
 	#  list of examples for each directory:
 	SET(LIST_EXAMPLES_IN_THIS_DIR
 		bayesianTracking
 		)
-	SET(CMAKE_EXAMPLE_DEPS mrpt-base mrpt-bayes mrpt-obs mrpt-gui)
+	SET(CMAKE_EXAMPLE_DEPS mrpt-bayes mrpt-obs mrpt-gui)
 	GENERATE_CMAKE_FILES_SAMPLES_DIRECTORY()
 
 	# === Depending on: base, obs, maps, etc... ===
@@ -320,7 +320,7 @@ IF(BUILD_EXAMPLES)
 			openNI2_2d-icp-slam
 			openNI2_to_rawlog)
 
-		SET(CMAKE_EXAMPLE_DEPS mrpt-base mrpt-hwdrivers mrpt-gui mrpt-opengl mrpt-maps)
+		SET(CMAKE_EXAMPLE_DEPS mrpt-hwdrivers mrpt-gui mrpt-opengl mrpt-maps)
 		#SET(CMAKE_EXAMPLE_LINK_LIBS ${MRPT_LINKER_LIBS} "\${OPENNI2_LIBRARIES}")
 		GENERATE_CMAKE_FILES_SAMPLES_DIRECTORY()
 	ENDIF(MRPT_HAS_OPENNI2)

@@ -11,8 +11,8 @@
 #include <mrpt/gui/CDisplayWindow3D.h>
 #include <mrpt/opengl/CTexturedPlane.h>
 #include <mrpt/opengl/CText.h>
-
 #include <mrpt/examples_config.h>
+
 const std::string myTestFile(
 	MRPT_EXAMPLES_BASE_DIRECTORY + std::string("imageBasics/frame_color.jpg"));
 
@@ -21,6 +21,7 @@ using namespace mrpt;
 using namespace mrpt::gui;
 using namespace mrpt::opengl;
 using namespace mrpt::math;
+using namespace mrpt::img;
 
 // ------------------------------------------------------
 //				TextureSizes_test

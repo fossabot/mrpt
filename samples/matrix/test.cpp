@@ -8,8 +8,11 @@
    +------------------------------------------------------------------------+ */
 
 #include <mrpt/gui.h>
-#include <mrpt/math.h>
+#include <mrpt/math/distributions.h>
+#include <mrpt/system/CTicTac.h>
+#include <mrpt/math/utils.h>
 
+using namespace mrpt::system;
 using namespace mrpt;
 using namespace mrpt::math;
 using namespace std;

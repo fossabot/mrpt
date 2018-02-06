@@ -681,7 +681,7 @@ void CRangeBearingParticleFilter::getMean(
 		 it != m_particles.end(); it++)
 		sumW += exp(it->log_w);
 
-	ASSERT_(sumW > 0)
+	ASSERT_(sumW > 0);
 
 	x = y = vx = vy = 0;
 

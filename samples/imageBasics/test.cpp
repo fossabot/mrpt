@@ -8,11 +8,17 @@
    +------------------------------------------------------------------------+ */
 
 #include <mrpt/gui.h>
+#include <mrpt/system/CTicTac.h>
+#include <mrpt/img/CImage.h>
+#include <mrpt/system/CTimeLogger.h>
+#include <mrpt/math/CMatrix.h>
 
 using namespace mrpt;
 using namespace mrpt::gui;
 using namespace mrpt::math;
 using namespace std;
+using namespace mrpt::system;
+using namespace mrpt::img;
 
 #include <mrpt/examples_config.h>
 string myDataDir(MRPT_EXAMPLES_BASE_DIRECTORY + string("imageBasics/"));

@@ -17,7 +17,10 @@
 #include <mrpt/gui/CDisplayWindow3D.h>
 #include <mrpt/opengl/CGridPlaneXY.h>
 #include <mrpt/opengl/stock_objects.h>
+#include <mrpt/system/CTicTac.h>
+#include <mrpt/img/TColor.h>
 
+using namespace mrpt::img;
 using namespace std;
 using namespace mrpt;
 using namespace mrpt::math;
@@ -50,8 +53,8 @@ void TestSLERP()
 	}
 
 	// Initialize the start, end pose of the animation
-	const CPose3D pose_a(0, 0, 0, DEG2RAD(0), DEG2RAD(0), DEG2RAD(0));
-	const CPose3D pose_b(3, 4, 1, DEG2RAD(120), DEG2RAD(40), DEG2RAD(50));
+	const TPose3D pose_a(0, 0, 0, DEG2RAD(0), DEG2RAD(0), DEG2RAD(0));
+	const TPose3D pose_b(3, 4, 1, DEG2RAD(120), DEG2RAD(40), DEG2RAD(50));
 
 	{
 		// XYZ corner at A:
@@ -95,14 +98,14 @@ void TestSLERP()
 			t = 1 - (t - MOVE_PERIOD) / MOVE_PERIOD;
 
 		// SLERP & LERP interpolation:
-		CPose3D pose_interp;
+		TPose3D pose_interp;
 		mrpt::math::slerp(pose_a, pose_b, t, pose_interp);
 
 		// Move the scene:
 		COpenGLScene::Ptr& theScene = win.get3DSceneAndLock();
 
 		opengl::CRenderizable::Ptr obj1 = theScene->getByName("slerp_obj");
-		obj1->setPose(pose_interp);
+		obj1->setPose(CPose3D(pose_interp));
 
 		// Show text:
 		win.addTextMessage(

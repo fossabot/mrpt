@@ -9,6 +9,8 @@
 
 #include <mrpt/comms/CSerialPort.h>
 
+#include <iostream>
+
 using namespace mrpt::comms;
 using namespace std;
 

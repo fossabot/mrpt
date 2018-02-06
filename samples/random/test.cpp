@@ -13,9 +13,9 @@
  */
 
 #include <mrpt/gui.h>
-#include <mrpt/math.h>
-#include <mrpt/system.h>
 #include <mrpt/random.h>
+#include <mrpt/math/CHistogram.h>
+#include <mrpt/math/distributions.h>
 
 using namespace mrpt;
 using namespace mrpt::gui;

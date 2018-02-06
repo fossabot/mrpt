@@ -32,7 +32,7 @@ Output files:
    ------------------------------------------------------ */
 
 #include <mrpt/system/filesystem.h>
-#include <mrpt/system/CTextFileLinesParser.h>
+#include <mrpt/io/CTextFileLinesParser.h>
 #include <mrpt/io/CFileGZOutputStream.h>
 #include <mrpt/obs/CObservation3DRangeScan.h>
 #include <mrpt/obs/CObservationIMU.h>
@@ -40,6 +40,7 @@ Output files:
 using namespace std;
 using namespace mrpt;
 using namespace mrpt::obs;
+using namespace mrpt::io;
 
 const double KINECT_FPS = 30.0;
 
@@ -78,7 +79,7 @@ void rgbd2rawlog(const string& src_path, const string& out_name)
 	std::istringstream line;
 	if (mrpt::system::fileExists(in_fil_rgb))
 	{
-		mrpt::utils::CTextFileLinesParser fparser(in_fil_rgb);
+		mrpt::io::CTextFileLinesParser fparser(in_fil_rgb);
 		while (fparser.getNextLine(line))
 		{
 			double tim;
@@ -88,7 +89,7 @@ void rgbd2rawlog(const string& src_path, const string& out_name)
 	}
 	if (mrpt::system::fileExists(in_fil_depth))
 	{
-		mrpt::utils::CTextFileLinesParser fparser(in_fil_depth);
+		mrpt::io::CTextFileLinesParser fparser(in_fil_depth);
 		while (fparser.getNextLine(line))
 		{
 			double tim;
@@ -98,7 +99,7 @@ void rgbd2rawlog(const string& src_path, const string& out_name)
 	}
 	if (mrpt::system::fileExists(in_fil_acc))
 	{
-		mrpt::utils::CTextFileLinesParser fparser(in_fil_acc);
+		mrpt::io::CTextFileLinesParser fparser(in_fil_acc);
 		while (fparser.getNextLine(line))
 		{
 			double tim;

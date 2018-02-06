@@ -14,6 +14,7 @@
 #include <cstdio>  // printf()
 #include <thread>
 #include <chrono>
+#include <iostream>
 
 bool sockets_test_passed_ok = false;
 // Test payload:

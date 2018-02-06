@@ -8,12 +8,17 @@
    +------------------------------------------------------------------------+ */
 
 #include <mrpt/gui.h>
-#include <mrpt/math.h>
+#include <mrpt/math/CMatrix.h>
+#include <mrpt/system/CTicTac.h>
+#include <mrpt/img/CImage.h>
+#include <mrpt/math/fourier.h>
 
 using namespace mrpt;
 using namespace mrpt::gui;
 using namespace mrpt::math;
 using namespace std;
+using namespace img;
+using namespace mrpt::system;
 
 #include <mrpt/examples_config.h>
 string myDataDir(MRPT_EXAMPLES_BASE_DIRECTORY + string("imageConvolutionFFT/"));

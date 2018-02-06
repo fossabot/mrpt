@@ -8,13 +8,17 @@
    +------------------------------------------------------------------------+ */
 
 #include <mrpt/gui.h>
-#include <mrpt/math.h>
+#include <mrpt/math/CMatrix.h>
+#include <mrpt/system/CTicTac.h>
+#include <mrpt/img/TColor.h>
+#include <mrpt/math/fourier.h>
 
 using namespace mrpt;
 using namespace mrpt::math;
 using namespace mrpt::gui;
 using namespace mrpt::system;
 using namespace std;
+using namespace mrpt::img;
 
 #include <mrpt/examples_config.h>
 string myDataDir(
