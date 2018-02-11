@@ -1,0 +1,19 @@
+version: 2.0
+jobs:
+  build_xenial:
+    environment:
+      - CC: GCC
+      - TASK: build
+    docker:
+      - image: ubuntu:xenial
+    steps:
+      - checkout
+      - run: apt-get update -qq
+      - run: source travis/check_style.sh
+      - run: source travis/travis_main.sh
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build_xenial
+
