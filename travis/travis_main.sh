@@ -25,7 +25,7 @@ function prepare_install()
     apt-get install libboost-python-dev libpython-dev python-numpy -y
 
     # We must use a custom PPA to solve errors in PCL official pkgs
-    add-apt-repository ppa:jolting/backport-mrpt
+    add-apt-repository -y ppa:jolting/backport-mrpt
     apt-get update -qq
     apt-get install libpcl-dev -y
     if [ "$DEPS" != "headless" ]; then
